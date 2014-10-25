@@ -33,7 +33,7 @@ shinyServer(function(input, output) {
   output$summary <- renderPrint({
     cat("Analysis summary:")
 	cat("\n Number of factors: ", input$n)
-	cat("\n Variables in the model: ", input$'custom-headers')
+	cat("\n Variables in the model: ", paste(as.character(input$'custom-headers'), collapse=", "))
 	cat("\n Analysis Type:", input$a)
 	cat("\n Rotation Type:", input$b)
 	cat("\n \n")
